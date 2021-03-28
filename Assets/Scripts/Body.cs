@@ -15,21 +15,36 @@ public class StatBlock
 }
 public class Body : MonoBehaviour
 {
-    // Start is called before the first frame update
+
     public GameObject worldObj;
     [SerializeField] public StatBlock statsBlock;
 
-    // Start is called before the first frame update
-    void Start()
-    {
 
+    public void Start()
+    {
+        TickManager.onTick += handleHealth;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void handleHealth(object sender, TickManager.OnTickEventArgs e)
     {
+        //heat beat. Manage everything in here like bleeding and checking for death.
+        if(statsBlock.hp <=0)
+        {
+            //Die, duh.
+        }
+    }
+
+    public void receiveDamage(float dmg)
+    {
+        statsBlock.hp -= dmg;
 
     }
+    private void Update()
+    {
+        
+    }
+
+    
 
     void OnTriggerEnter2D(Collider2D col)
     {

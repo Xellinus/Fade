@@ -23,11 +23,14 @@ using UnityEngine;
 // B ?
 // Left and Right, page through left/right
 // up / down duh page through what tho? quick menu?
+
+public delegate void onInvoke();
 [Serializable]
 public class Skill
 {
     public string name;
     public string type;
+    public onInvoke onInvoke;
     
 }
  
@@ -42,7 +45,7 @@ public class Skills : MonoBehaviour
 
         attack.name = "Swing";
         attack.type = "PAS";
-        
+        attack.onInvoke += Swing;
 
         skillSlots[0] = attack;
     }

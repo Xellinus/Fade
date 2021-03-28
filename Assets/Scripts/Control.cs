@@ -8,6 +8,7 @@ public class Control : MonoBehaviour
 {
     public Controls controls;
     public Body playerStats;
+    public Skills playerSkills;
     Vector2 playerPos;
     Rigidbody2D rigidbody2d;
     public bool isMoving;
@@ -22,7 +23,7 @@ public class Control : MonoBehaviour
     {
         playerStats = GetComponent<Body>();
         rigidbody2d = GetComponent<Rigidbody2D>();
-        
+        playerSkills = GetComponent<Skills>();
     }
 
     private void FixedUpdate()
@@ -38,6 +39,7 @@ public class Control : MonoBehaviour
     public void handlePrimaryActiveSkillUse(InputAction.CallbackContext obj)
     {
         Debug.Log("PAS used");
+        playerSkills.skillSlots[0].onInvoke();
     }
 
     public void handleMove(InputAction.CallbackContext obj)
