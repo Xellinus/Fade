@@ -28,7 +28,7 @@ public class Skill
 {
     public string name;
     public string type;
-    public delegate void onInvoke();
+    
 }
  
 public class Skills : MonoBehaviour
