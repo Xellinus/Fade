@@ -21,6 +21,7 @@ public class Control : MonoBehaviour
  
     void Start()
     {
+    
         playerStats = GetComponent<Body>();
         rigidbody2d = GetComponent<Rigidbody2D>();
         playerSkills = GetComponent<Skills>();

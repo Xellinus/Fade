@@ -47,9 +47,29 @@ public class Skills : MonoBehaviour
         attack.type = "PAS";
         attack.onInvoke += Swing;
 
-        skillSlots[0] = attack;
+        slotSkill(attack, "Primary");
     }
     
+    public void slotSkill(Skill skill, string slot)
+    {
+        int slotNum =0;
+        switch (slot)
+        {
+            case "Primary":
+                slotNum = 0;
+                break;
+            case "Seconday":
+                slotNum = 1;
+                break;
+            case "Support":
+                slotNum = 2;
+                break;
+            case "Movement":
+                slotNum = 3;
+                break;
+        }
+        skillSlots[slotNum] = skill;
+    }
 
     
 
