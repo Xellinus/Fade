@@ -47,3 +47,6 @@ TagManager:
   - name: Scenery
     uniqueID: 321511235
     locked: 0
+  - name: ItemDrops
+    uniqueID: 4171843385
+    locked: 0
