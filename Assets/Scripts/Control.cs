@@ -12,6 +12,7 @@ public class Control : MonoBehaviour
     Vector2 playerPos;
     Rigidbody2D rigidbody2d;
     public bool isMoving;
+    private Vector2 movementInput = Vector2.zero;
 
     private void Awake()
     {
@@ -34,6 +35,7 @@ public class Control : MonoBehaviour
 
     private void doMove()
     {
+        playerPos += movementInput * playerStats.statsBlock.speed * Time.deltaTime;
         rigidbody2d.MovePosition(playerPos);
     }
 
@@ -45,15 +47,8 @@ public class Control : MonoBehaviour
 
     public void handleMove(InputAction.CallbackContext obj)
     {
-        
-
         playerPos = rigidbody2d.position;
-        var moveDir = obj.ReadValue<Vector2>();
-        playerPos += moveDir * playerStats.statsBlock.speed * Time.deltaTime;
-       // rigidbody2d.MovePosition(playerPos);
-
-
-
+        movementInput = obj.ReadValue<Vector2>();
     }
     public void handleRHand(InputAction.CallbackContext obj)
     {
