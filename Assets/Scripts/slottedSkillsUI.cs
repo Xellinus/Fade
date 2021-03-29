@@ -9,6 +9,8 @@ public class slottedSkillsUI : MonoBehaviour
     public Text primarySlot;
     public GameObject player;
 
+
+
     void Start()
     {
         

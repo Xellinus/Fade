@@ -30,7 +30,7 @@ public class Body : MonoBehaviour
         //heat beat. Manage everything in here like bleeding and checking for death.
         if(statsBlock.hp <=0)
         {
-            //Die, duh.
+            Destroy(this);
         }
     }
 

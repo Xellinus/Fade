@@ -37,6 +37,7 @@ public class Skill
 public class Skills : MonoBehaviour
 {
     public Skill[] skillSlots;
+    public Skill[] knownSkills;
 
     public void Start()
     {
