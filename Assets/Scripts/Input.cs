@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Control : MonoBehaviour
+public class Input : MonoBehaviour
 {
     public Controls controls;
     public Body playerStats;
     public Skills playerSkills;
-    Vector2 playerPos;
+    public Vector2 playerPos;
     Rigidbody2D rigidbody2d;
     public bool isMoving;
     private Vector2 movementInput = Vector2.zero;
@@ -26,6 +26,7 @@ public class Control : MonoBehaviour
         playerStats = GetComponent<Body>();
         rigidbody2d = GetComponent<Rigidbody2D>();
         playerSkills = GetComponent<Skills>();
+        playerPos = rigidbody2d.position;
     }
 
     private void FixedUpdate()
