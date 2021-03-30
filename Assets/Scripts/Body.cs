@@ -11,7 +11,7 @@ public class StatBlock
     public float hp;
     public float power;
     public float mana;
-
+    
 }
 public class Body : MonoBehaviour
 {
