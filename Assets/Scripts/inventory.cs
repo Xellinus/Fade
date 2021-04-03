@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    IDictionary<Item, int> inventory = new Dictionary<Item, int>();
+    public IDictionary<Item, int> inventory = new Dictionary<Item, int>();
 
-    void AddItem(Item item, int count)
+    public void AddItem(Item item, int count)
     {
-        if (count == 0) count = 1;
+        if (count == 0)
+            count = 1;
 
         inventory.Add(item, count);
 
     }
-    void SubItem(string name, int count)
+    public void SubItem(string name, int count)
     {
         Item thing = GetItemByName(name);
         if (count == 0)
@@ -22,11 +23,11 @@ public class Inventory : MonoBehaviour
             inventory[thing] -= count;
     }
 
-    void RemoveItembyName(string name)
+    public void RemoveItembyName(string name)
     {
         inventory.Remove(GetItemByName(name));
     }
-    Item GetItemByName(string name)
+    public Item GetItemByName(string name)
     {
         foreach (KeyValuePair<Item, int> items in inventory)
         {
