@@ -11,7 +11,7 @@ public class StatBlock
     public float hp;
     public float power;
     public float mana;
-
+    
 }
 public class Body : MonoBehaviour
 {
@@ -30,7 +30,7 @@ public class Body : MonoBehaviour
         //heat beat. Manage everything in here like bleeding and checking for death.
         if(statsBlock.hp <=0)
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
     }
 
