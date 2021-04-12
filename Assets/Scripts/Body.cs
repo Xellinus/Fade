@@ -17,7 +17,7 @@ public class Body : MonoBehaviour
 {
 
     public GameObject worldObj;
-    [SerializeField] public StatBlock statsBlock;
+    public StatBlock statsBlock;
 
 
     public void Start()

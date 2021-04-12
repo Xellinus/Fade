@@ -1,9 +1,21 @@
+using System;
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
+public class Equipment
+{
+    public Item chestSlot;
+    public Item rHandSlot;
+    public Item lHandSlot;
+    public Item feetSlot;    
+
+}
 public class Inventory : MonoBehaviour
 {
+    public Equipment equipmentSlots;
     public IDictionary<Item, int> inventory = new Dictionary<Item, int>();
 
     public void AddItem(Item item, int count)

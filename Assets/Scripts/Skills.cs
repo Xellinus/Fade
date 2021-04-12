@@ -36,8 +36,9 @@ public class Skill
  
 public class Skills : MonoBehaviour
 {
+    public List<Skill> knownSkills;
     public Skill[] skillSlots;
-    public Skill[] knownSkills;
+//    public Skill[] knownSkills;
 
     public void Start()
     {
@@ -47,6 +48,7 @@ public class Skills : MonoBehaviour
         attack.name = "Swing";
         attack.type = "PAS";
         attack.onInvoke += Swing;
+        knownSkills.Add(attack);
 
         slotSkill(attack, "Primary");
     }

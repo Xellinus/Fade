@@ -5373,6 +5373,7 @@ GameObject:
   - component: {fileID: 229932151}
   - component: {fileID: 229932153}
   - component: {fileID: 229932152}
+  - component: {fileID: 229932154}
   m_Layer: 5
   m_Name: List
   m_TagString: Untagged
@@ -5441,6 +5442,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 229932150}
   m_CullTransparentMesh: 1
+--- !u!114 &229932154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229932150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41e84e057a7d5a34eba8d3c1fc98a364, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &330888883
 GameObject:
   m_ObjectHideFlags: 0
@@ -6316,6 +6329,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93f646c728bd7934ebc88bde6f639860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  equipmentSlots:
+    chestSlot: {fileID: 0}
+    rHandSlot: {fileID: 0}
+    lHandSlot: {fileID: 0}
+    feetSlot: {fileID: 0}
 --- !u!95 &922897036
 Animator:
   serializedVersion: 3
@@ -6350,7 +6368,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &950020915
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6384,7 +6402,7 @@ GameObject:
   - component: {fileID: 1011238391}
   - component: {fileID: 1011238390}
   m_Layer: 5
-  m_Name: KnownSkills
+  m_Name: Items
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6801,6 +6819,7 @@ GameObject:
   - component: {fileID: 1414627000}
   - component: {fileID: 1414627002}
   - component: {fileID: 1414627001}
+  - component: {fileID: 1414627003}
   m_Layer: 5
   m_Name: List
   m_TagString: Untagged
@@ -6869,6 +6888,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414626999}
   m_CullTransparentMesh: 1
+--- !u!114 &1414627003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414626999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efcb7f554d55a9642b46909ae71331f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1428358344
 GameObject:
   m_ObjectHideFlags: 0
@@ -6902,6 +6933,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: 
   weight: 0
+  inventoryIcon: {fileID: 0}
+  fieldIcon: {fileID: 0}
   damage: 0
   speed: 0
   range: 0
